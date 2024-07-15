@@ -1,0 +1,32 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: gulimall-search
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  thymeleaf:
+    cache: false
+  session:
+    store-type: redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+
+elasticsearch:
+  host-addr: 127.0.0.1
+  port: 9200
+  schema: http
+
+
+feign:
+  client:
+    config:
+      default:
+        read-timeout: 5000
+
+
